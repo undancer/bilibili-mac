@@ -4,6 +4,9 @@
  {
      "asar":true,
      "mac":{
-         "target":["dir"]
+         "target":[
+             "dir",
+             "zip",
+        ]
      }
  }
