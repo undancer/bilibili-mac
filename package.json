@@ -3,10 +3,11 @@
   "devDependencies": {
     "asar": "^3.1.0",
     "electron": "^18.2.3",
-    "electron-builder": "^23.0.3"
+    "electron-builder": "^23.0.3",
+    "replace-in-file": "^6.3.2"
   },
   "scripts": {
-    "prebuild":"rm -rf app && asar e app.asar app",
+    "prebuild": "rm -rf app && asar e app.asar app && replace-in-file --configFile=scripts/config.js",
     "build": "electron-builder"
   }
 }
