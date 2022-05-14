@@ -1,0 +1,2 @@
+icon.icns filter=lfs diff=lfs merge=lfs -text
+app.asar filter=lfs diff=lfs merge=lfs -text
