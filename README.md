@@ -2,6 +2,8 @@
 
 Bilibili 官方桌面版 macOS 移植
 
+**官方有Mac版了，此仓库作废**
+
 ### 生成步骤
 
 1. 下载官方windows版（https://app.bilibili.com/）
