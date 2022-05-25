@@ -21,6 +21,29 @@ importers:
   packages/app:
     specifiers: {}
 
+  packages/core:
+    specifiers:
+      '@types/ms': ^0.7.31
+      ms: ^2.1.3
+      rollup: ^1.32.1
+      rollup-plugin-commonjs: ^9.3.4
+      rollup-plugin-node-resolve: ^4.2.4
+      rollup-plugin-typescript: ^1.0.1
+      ts-node: ^7.0.1
+      tslib: ^1.14.1
+      typescript: ^3.9.10
+    dependencies:
+      ms: 2.1.3
+    devDependencies:
+      '@types/ms': 0.7.31
+      rollup: 1.32.1
+      rollup-plugin-commonjs: 9.3.4_rollup@1.32.1
+      rollup-plugin-node-resolve: 4.2.4
+      rollup-plugin-typescript: 1.0.1_effim3sij5dk4mzustx32lhuyq
+      ts-node: 7.0.1
+      tslib: 1.14.1
+      typescript: 3.9.10
+
   packages/rollup-starter-app:
     specifiers:
       '@rollup/plugin-commonjs': ^17.1.0
