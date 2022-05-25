@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         # os: [macos-latest, ubuntu-latest, windows-latest]
-        os: [macos-latest]
+        os: [ macos-latest ]
 
     steps:
       - name: Check out Git repository
@@ -17,7 +17,15 @@ jobs:
         with:
           lfs: true
 
-      - run: rm -rf yarn.lock
+      - run: rm -rf pnpm-lock.yaml
+
+      - name: setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7.1.5
+
+      #      - run: pnpm install --frozen-lockfile
+      - run: pnpm install
 
       - name: Install Node.js, NPM and Yarn
         uses: actions/setup-node@v3
@@ -25,13 +33,14 @@ jobs:
           node-version: 'lts/*'
 
       - name: Build/release Electron app
-        uses: samuelmeuli/action-electron-builder@v1
+        uses: cryogenicplanet/action-electron-builder@v2
         with:
           # GitHub token, automatically provided to the action
           # (No need to define this secret in the repo settings)
           github_token: ${{ secrets.github_token }}
+          skip_install: true
 
           # If the commit is tagged with a version (e.g. "v1.0.0"),
           # release the app after building
-#          release: ${{ startsWith(github.ref, 'refs/tags/v') }}
+          #          release: ${{ startsWith(github.ref, 'refs/tags/v') }}
           release: true

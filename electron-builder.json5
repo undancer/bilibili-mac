@@ -1,12 +1,12 @@
 /**
  * @see https://www.electron.build/configuration/configuration
  */
- {
-     "asar":true,
-     "mac":{
-         "target":[
-             "dir",
-             "zip",
-        ]
-     }
- }
+{
+  "asar": true,
+  "mac": {
+    "target": [
+      "dir",
+      "zip",
+    ]
+  }
+}
