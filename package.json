@@ -1,5 +1,10 @@
 {
   "name": "bilibili-mac",
+  "private": true,
+  "workspaces": [
+    "packages/**"
+  ],
+  "packageManager": "pnpm@7.1.5",
   "devDependencies": {
     "asar": "^3.1.0",
     "electron": "^18.2.4",
@@ -10,6 +15,7 @@
   },
   "scripts": {
     "prebuild": "rm -rf app && asar e app.asar app && esno scripts/copy.ts && esno scripts/sign.ts",
-    "build": "electron-builder"
+    "build": "pnpm -r --filter=./packages/** run build",
+    "electron:build": "electron-builder"
   }
 }
