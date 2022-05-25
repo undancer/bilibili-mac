@@ -1,3 +1,4 @@
 #!/usr/bin/env node
 
-console.log("app")
+let app = require('../packages/rollup-starter-lib-ts')
+console.log("app,", app())

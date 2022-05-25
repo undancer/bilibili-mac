@@ -333,3 +333,4 @@ $RECYCLE.BIN/
 
 ### 自定义 ###
 app/
+packages/**/public/bundle*
