@@ -16,6 +16,7 @@
   "scripts": {
     "prebuild": "rm -rf app && asar e app.asar app && esno scripts/copy.ts && esno scripts/sign.ts",
     "build": "pnpm -r --filter=./packages/** run build",
-    "electron:build": "electron-builder"
+    "electron:build": "electron-builder",
+    "app": "scripts/app.js"
   }
 }
